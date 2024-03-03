@@ -8,15 +8,7 @@ const precioSpan = document.querySelector(".precio-inicial");
 const totalSpan = document.querySelector(".valor-total");
 
 // Actualizar el precio base en el HTML
-precioSpan.textContent = precio;
-
-
-
-// Función para actualizar la cantidad y el total a pagar
-function actualizarCantidadYTotal() {
-    cantidadSpan.textContent = cantidad;
-    totalSpan.textContent = cantidad * precio;
-}
+precioSpan.innerHTML = precio;
 
 // Función para aumentar la cantidad
 function mas() {
@@ -30,6 +22,13 @@ function menos() {
     cantidad--;
     actualizarCantidadYTotal();
    } 
+}
+
+
+// Función para actualizar la cantidad y el total a pagar
+function actualizarCantidadYTotal() {
+    cantidadSpan.innerHTML = cantidad;
+    totalSpan.innerHTML = cantidad * precio;
 }
 
 
